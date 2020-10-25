@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/popcorn.png">
+    <title>Formulario de Alquiler</title>
+    <link rel="stylesheet" href="css/styleForm.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center pt-5 mt-5 mr-1">
+            <div class="col-md-6 formulario">
+                <form method="post" action="form/recibe.php" id="formulario">
+                    <div class="form-group text-center pt-3">
+                        <h2 class="text-light">FORMULARIO DE ALQUILER</h2>
+                    </div>
+                    <div class="form-group mx-sm-4 text-light">
+                        <div class="container1">
+                            <fieldset>
+                                <p>
+                                    <label for="pelicula">Nombre de la película: </label>
+                                    <input class="input" type="text" name="pelicula" id="pelicula" required>
+                                </p>
+                                <p>
+                                    <label for="pApellido">Primer apellido: </label>
+                                    <input class="input" type="text" name="pApellido" id="pApellido" required>
+                                </p>
+                                <p>
+                                    <label for="sApellido">Segundo apellido: </label>
+                                    <input class="input" type="text" name="sApellido" id="sApellido" required>
+                                </p>
+                                <p>
+                                    <label for="nombres">Nombres: </label>
+                                    <input class="input" type="text" name="nombres" id="nombres" required>
+                                </p>
+                                <p>
+                                    <label for="cElectronico">Correo electrónico: </label>
+                                    <input class="input" type="email" name="cElectronico" id="cElectronico" placeholder="Ejem: usuario@gmail.com" required>
+                                </p>
+                                <p>
+                                    <label for="telefono" class="formulario__label">Número de teléfono: </label>
+                                    <input class="input" type="number" name="telefono" id="telefono" placeholder="Ejem: 999999999" required>
+                                </p>
+                                <p>
+                                    <label for="fAlquiler">Fecha de alquiler: </label>
+                                    <input class="input" type="date" name="fAlquiler" id="fAlquiler" min="2020-01-01" required>
+                                </p>
+                                <p>
+                                    <label for="fDevolucion">Fecha de devolución: </label>
+                                    <input class="input" type="date" name="fDevolucion" id="fDevolucion" min="2020-01-01" required>
+                                </p>
+                                <p>
+                                    <p>Tarjeta</p>
+                                    <div class="radio">
+                                        <p>
+                                            <input type="radio" name="metodo" value="Visa" checked=""> Visa
+                                        </p>
+                                        <p>
+                                            <input type="radio" name="metodo" value="MasterCard"> MasterCard
+                                        </p>
+                                        <p>
+                                            <input type="radio" name="metodo" value="Interbank"> Interbank
+                                        </p>
+
+                                    </div>
+
+                                </p>
+                                <p>
+                                    <label for="precio">Precio de alquiler: </label>
+                                    <input class="input" type="number" name="precio" id="precio" pattern="[0-9]" min="10" max="20" title="Coste entre 10 y 20" placeholder="Ejem: 15" required>
+                                </p>
+                                <p>
+                                    <label for="nCuenta" class="formulario__label">Número de cuenta: </label>
+                                    <input class="input" type="number" name="nCuenta" id="nCuenta" pattern="[0-9] {14}" title="Deben ser 9 dígitos" required>
+                                </p>
+
+
+
+
+                        </div>
+                        <!--  
+                        <input class="btn btn-block" type="submit" name="enviar">-->
+                        <br>
+                        <div>
+                            <button type="submit" class="button">
+                            Enviar
+                            <span></span>
+                            </button>
+                        </div>
+
+
+                    </div>
+
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/validarForm.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

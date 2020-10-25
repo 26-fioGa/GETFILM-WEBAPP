@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    text-decoration: none;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+p {
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    color: white;
+    letter-spacing: .05rem;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: white;
+    padding-top: 30px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+
+/* Header Section */
+
+#header {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+}
+
+#header .header {
+    min-height: 8vh;
+    background-color: rgba(61, 54, 70, 0.24);
+}
+
+#header .header h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.5rem;
+    color: white;
+}
+
+#header .nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 0 10px;
+}
+
+#header .nav-list ul {
+    list-style: none;
+    position: absolute;
+    background-color: rgb(12, 19, 29);
+    width: 100vw;
+    height: 100vh;
+    left: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: .5s ease left;
+}
+
+#header .nav-list ul.active {
+    left: 0;
+}
+
+#header .nav-list ul a {
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+}
+
+#header .hamburger {
+    height: 60px;
+    width: 60px;
+    display: inline-block;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    cursor: pointer;
+    transform: scale(.8);
+    margin-right: 20px;
+}
+
+#header .hamburger .bar {
+    height: 2px;
+    width: 30px;
+    position: relative;
+    background-color: white;
+    z-index: -1;
+}
+
+#header .hamburger .bar::after,
+#header .hamburger .bar::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    background-color: white;
+    transition: .3s ease;
+    transition-property: top, bottom;
+}
+
+#header .hamburger .bar::after {
+    top: 8px;
+}
+
+#header .hamburger .bar::before {
+    bottom: 8px;
+}
+
+#header .hamburger.active .bar::before {
+    bottom: 0;
+}
+
+#header .hamburger.active .bar::after {
+    top: 0;
+}
+
+
+/* End Header Section */
+
+
+/* Hero Section */
+
+#hero {
+    background-image: url(../images/1917.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+
+#hero .hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+
+#hero h1 {
+    display: block;
+    width: fit-content;
+    font-size: 8.5rem;
+    position: relative;
+    color: white;
+    letter-spacing: 2rem;
+}
+
+#hero p {
+    display: block;
+    width: fit-content;
+    font-size: 1.8rem;
+    position: relative;
+    color: rgb(51, 64, 70);
+    float: right;
+}
+
+
+/*  End Hero Section */
+
+
+/* Info Section */
+
+#info {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(51, 64, 70);
+}
+
+#info .info-section {
+    background: url(../images/movies.jpg) no-repeat left;
+    background-size: 50%;
+    background-color: rgb(51, 64, 70);
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+#info .inner-container {
+    width: 55%;
+    float: right;
+    background-color: rgb(12, 19, 29);
+    padding: 100px;
+}
+
+#info .inner-container h1 {
+    font-size: 4rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+.text {
+    font-size: 1.4rem;
+    color: white;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+    text-align: justify;
+}
+
+
+/* End Info Section */
+
+
+/* Peliculas Section */
+
+#peliculas {
+    background-color: rgb(12, 19, 29);
+}
+
+.contenedor {
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.pelicula-top {
+    width: 70%;
+    margin: 0 auto;
+}
+
+div.box {
+    padding: 0;
+}
+
+.box {
+    position: relative;
+    width: 250px;
+    perspective: 1000px;
+}
+
+.box .box-img {
+    transform: rotateY(0);
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.box:hover .box-img {
+    transform: rotateY(-90deg);
+}
+
+.box .box-img img {
+    width: 250px;
+    height: 380px;
+    border: 2px solid #000;
+    border-radius: 10px;
+}
+
+.box .content {
+    color: white;
+    background: rgb(51, 64, 70);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 10px;
+    transform: rotateY(90deg);
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.box:hover .content {
+    transform: rotateY(0);
+}
+
+.box .content h3 {
+    font-size: 2rem;
+}
+
+.box .content p {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 20px 0;
+    margin: 0 25px;
+}
+
+.box .button {
+    background: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 260px 50px;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    transform: rotateY(90deg);
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.box:hover .button {
+    transform: rotateY(0);
+}
+
+.box .button li {
+    list-style: none;
+    padding: 85px 0;
+}
+
+.box .button li a {
+    color: white;
+    text-decoration: none;
+    border: 1px solid transparent;
+    padding: 5px 10px;
+    background: rgb(12, 19, 29);
+    border-radius: 50px;
+}
+
+
+/* End Peliculas Section */
+
+
+/* Media Query For Tablet */
+
+@media only screen and (min-width:480px) {
+    /* Hero */
+    #hero h1 {
+        font-size: 4.2rem;
+    }
+    #hero p {
+        font-size: 2.5rem;
+    }
+    /* End Hero */
+    /* Efectos Section */
+    h1.section-title {
+        font-size: 6rem;
+    }
+    /* End Efectos Section */
+    /* Regiones Section */
+    /* End Regiones Section */
+}
+
+
+/* End Media Query For Tablet */
+
+
+/* Media Query for Desktop */
+
+@media only screen and (min-width:768px) {
+    /* Header */
+    #header .hamburger {
+        display: none;
+    }
+    #header .nav-list ul {
+        position: initial;
+        display: block;
+        height: auto;
+        width: fit-content;
+        background-color: transparent;
+    }
+    #header .nav-list ul li {
+        display: inline-block;
+    }
+    #header .nav-list ul li a {
+        font-size: 1.8rem;
+    }
+    #header .nav-list ul a:after {
+        display: none;
+    }
+    /* End Header */
+    /* Hero */
+    #hero h1 {
+        font-size: 7rem;
+    }
+    #hero p {
+        font-size: 4rem;
+    }
+    /* End Hero */
+    /* Efectos */
+}
+
+
+/* End Efectos */
+
+
+/* Info */
+
+
+/* End Info */
+
+@media only screen and (max-width:1200px) {
+    #info .inner-container {
+        padding: 80px;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    #info .info-section {
+        background-size: 100%;
+        padding: 100px 40px;
+    }
+    #info .inner-container {
+        width: 100%;
+    }
+}
+
+
+/* End Media Query for Desktop */
